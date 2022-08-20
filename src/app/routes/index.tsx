@@ -1,15 +1,17 @@
-import {BrowserRouter, Route, Router, Routes, Navigate} from 'react-router-dom'
+import {BrowserRouter, Route, Routes as Switch, Navigate} from 'react-router-dom'
 import { Dashboard } from '../pages'
+import { Login } from '../pages'
 
-export const Routex = () => {
+export const Routes = () => {
   return(
     <BrowserRouter>
-      <Routes>
+      <Switch>
 
         <Route path='/pagina-inicial' element={ <Dashboard/> }/>
-        <Route path='*' element={ <Navigate replace to='/pagina-inicial' /> }/>
+        <Route path='/entrar' element={ <Login/> }/>
+        <Route path='*' element={ <Navigate to='/pagina-inicial' /> }/>
 
-      </Routes>
+      </Switch>
     </BrowserRouter>
   )
 }

@@ -1,7 +1,7 @@
-import { Routex } from "./routes"
+import { Routes } from "./routes"
 
 export const App = () => {
   return(
-    <Routex/>
+    <Routes/>
   )
 }
